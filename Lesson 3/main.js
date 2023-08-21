@@ -104,7 +104,7 @@ for( let i =0;  i < 1; i++){
  </div>`)
 }
 // є масив
-/*let users = [
+let users = [
     {name: 'vasya', age: 31, status: false},
     {name: 'petya', age: 30, status: true},
     {name: 'kolya', age: 29, status: true},
@@ -116,7 +116,7 @@ for( let i =0;  i < 1; i++){
     {name: 'masha', age: 30, status: true},
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
-];*/
+];
 // за допомоги циклу вивести:
 // - користувачів зі статусом true
 for (let user of users) {
