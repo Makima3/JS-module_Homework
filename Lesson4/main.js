@@ -1,28 +1,20 @@
 //- створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-let a = 8;
-let b = 5;
-let square = a * b;
+
 function squareRectangle (a,b){
-    console.log(8 * 5);
+    return(a * b);
 }
-squareRectangle(square);
+squareRectangle(8,5);
 //- створити функцію яка обчислює та повертає площу кола з радіусом r
-let r = 5;
-let squareC = Math.PI * Math.pow(r, 2);
 function squareCircle(r){
-    console.log(squareC);
+    return Math.PI * r **2;
 }
-squareCircle(squareC);
+squareCircle(6);
 //- створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 // S =  2πR(H + R)
-let h = 7;
-let rad = 3;
-let squareCylinder = 2*Math.PI*rad*(h+rad);
-function calculateSquareCylinder (){
-    console.log(squareCylinder);
+function calculateSquareCylinder (rad,h){
+  return 2*Math.PI*rad*(rad+h);
 }
-calculateSquareCylinder(squareCylinder);
-
+calculateSquareCylinder(8,9);
 //- створити функцію яка приймає масив та виводить кожен його елемент
 
 function array(users){
@@ -93,14 +85,14 @@ let arr =[
     age:5
 },
 {
-    id: 1,
-    name: 'ira',
-    age:5
+    id: 2,
+    name: 'vika',
+    age:45
 },
 {
-    id: 1,
-    name: 'ira',
-    age:5
+    id: 3,
+    name: 'igor',
+    age:23
 },
 ]
 user(arr)
