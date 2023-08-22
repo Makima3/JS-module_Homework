@@ -75,7 +75,6 @@ function user (array){
     for (let i=0; i<array.length;i++){
     document.write(`<div>${array[i].id}, ${array[i].name}, ${array[i].age}</div>`)
     }
-
     }
 
 let arr =[
