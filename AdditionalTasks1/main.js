@@ -77,7 +77,7 @@ for(let c =0; c<multiples.length; c++){
 
 // 8. вивести масив в зворотньому порядку.
 let multiples1 = [2,17,13,6,22,31,45,66,100,-18];
-for(let h =multiples1.length-1; h>0; h--){
+for(let h =multiples1.length-1; h>=0; h--){
     if(multiples1[h] % 3===0){
         multiples1[h]='okten'
     }
@@ -86,69 +86,69 @@ for(let h =multiples1.length-1; h>0; h--){
 
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
 let numbersReverse =[54,26,89,1,456];
-for (let w= numbersReverse.length-1; w>0; w-- ){
+for (let w= numbersReverse.length-1; w>=0; w-- ){
     console.log(numbersReverse[w])
 }
 
 let stringReverse =['tree','ground', 'false','fire','letter'];
-for(let s= stringReverse.length-1; s>0; s--){
-    console.log(string[s]);
+for(let s= stringReverse.length-1; s>=0; s--){
+    console.log(stringReverse[s]);
 }
 
 let anythingReverse = [false, true, 45,'second',23.6];
-for (let n = anythingReverse.length-1; n>0; n--){
+for (let n = anythingReverse.length-1; n>=0; n--){
     console.log(anythingReverse[n]);
 }
+// Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль (у зворотньому напрямку)
+let emptyArrRevers = [];
+for (let i = emptyArrRevers.length-1; i>=0; i--){
+    emptyArrRevers[0] ='peugeot';
+    emptyArrRevers[1] =true;
+    emptyArrRevers[2] =215.4;
+    emptyArrRevers[3] =4;
+    emptyArrRevers[4] ='flower';
+    emptyArrRevers[5] =false;
 
-// let emptyArrReverse = [];
-// for (let some = emptyArrReverse.length-1; some>0; some--){
-//     emptyArrReverse[0] ='peugeot';
-//     emptyArrReverse[1] =true;
-//     emptyArrReverse[2] =215.4;
-//     emptyArrReverse[3] =4;
-//     emptyArrReverse[4] ='flower';
-//     emptyArrReverse[5] =false;
-//     console.log(emptyArrReverse);
-// }
+}
+console.log(emptyArrRevers[i]);
 
-//1.
+//1.;
 let arrForWhileReverse = [2,17,13,6,22,31,45,66,100,-18];
 let k = arrForWhileReverse.length-1;
-while (k>1 ){
+while (k>=0 ){
     console.log(arrForWhileReverse[k]);
     k--;
 }
 //2.
 let arrForReverse = [2,17,13,6,22,31,45,66,100,-18];
-for (let i = arrForReverse.length-1; i>1; i--){
+for (let i = arrForReverse.length-1; i>=1; i--){
     console.log(arrForReverse[i])
 }
 //3.
 let arrWhileOddReverse = [2,17,13,6,22,31,45,66,100,-18];
 let v = arrWhileOddReverse.length-1;
-while (v>0){
+while (v>=0){
     if (v % 2 )
         console.log(arrWhileOddReverse[v])
     v--;
 }
-
 //4.
 let arrForOddReverse = [2,17,13,6,22,31,45,66,100,-18];
-for(let y =arrForOddReverse.length-1; y>0; y--){
+for(let y =arrForOddReverse.length-1; y>=0; y--){
     if (y % 2)
         console.log(arrForOddReverse[y]);
 }
 //5.
 let arrWhileEvenReverse = [2,17,13,6,22,31,45,66,100,-18];
 let u = arrWhileEvenReverse.length-1;
-while (u>0){
+while (u>=0){
     if (arrWhileEvenReverse[u] % 2===0 )
         console.log(arrWhileEvenReverse[u])
     u--;
 }
 //6.
 let arrForEvenReverse = [2,17,13,6,22,31,45,66,100,-18];
-for(let t =arrForEvenReverse.length-1; t>0; t--){
+for(let t =arrForEvenReverse.length-1; t>=0; t--){
     if (arrForEvenReverse[t] % 2===0)
         console.log(arrForEvenReverse[t]);
 }
@@ -206,18 +206,21 @@ for (let m = 0; m < 10; m++) {
    emptyArray[9] = 'mercedes';
 }
 console.log(emptyArray);
-// - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
-let justArr =[false, true, 'toyota',564,2.2, 'chevrolet', 'range', true, true,23]
-for (let ii = 0; ii< 10; ii++) {
-    console.log(ii++)
+// - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер
+// кроку через console.log та document.write
+for (let i = 0; i< 10; i++) {
+    console.log(i++)
 }
-document.write(`${justArr[ii++]}`)
-
 // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
-for (let ii = 0; ii< 100; ii++) {
-    console.log(ii++)
+for (let i = 0; i< 100; i++) {
+    console.log( document.write(i++))
+
 }
-// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+// - Створити цикл for на 100 ітерацій з кроком 2.// Вивести поточний номер кроку через console.log та document.write
+for (let v = 0;i < 100; i+=2) {
+    console.log(i+=2)
+}
+// document.write (i+=2);.
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
