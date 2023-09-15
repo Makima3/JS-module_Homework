@@ -1,17 +1,11 @@
 //- створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-let squareRectangle = (a,b) =>{
-    return(a * b);
-}
+let squareRectangle = (a,b) =>a * b;
 console.log(squareRectangle(8,5));
 //- створити функцію яка обчислює та повертає площу кола з радіусом r
-let  squareCircle= (r)=>{
-    return (Math.PI * r **2);
-}
+let  squareCircle= (r)=>Math.PI * r **2;
 console.log(squareCircle(6));
 //- створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-let calculateSquareCylinder = (rad,h)=>{
-    return (2*Math.PI*rad*(rad+h));
-}
+let calculateSquareCylinder = (rad,h)=>2*Math.PI*rad*(rad+h);
 console.log(calculateSquareCylinder(8,9));
 //- створити функцію яка приймає масив та виводить кожен його елемент
 let array = [10,'bird',true, 63.2,false];
@@ -23,7 +17,7 @@ let arrayUsers1= (arr) =>{
 arrayUsers1(array);
 //- створити функцію яка створює параграф з текстом. Текст задати через аргумент
 let text = (p)=>{
-    document.write(p)
+    document.write(`<p>${p}</p>`)
 }
 text('lorem')
 //- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
@@ -81,11 +75,16 @@ let arr =[
 ]
 user(arr)
 //- створити функцію яка повертає найменьше число з масиву
-let minim1 =(array)=>{
-    return Math.min(...array)
+let x = [1,5,64,645,358,4];
+let minimal =(array)=>{
+    let result= array[0];
+    for (i = 1; i < minimal.length; i++) {
+        if (array[1] < result){
+            result = array[1];
+        }
+    }
+    return result;
 }
-let x1 = minim1([1,5,64,645,358,4])
-console.log(x1)
 //- створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 let suma1 = (array)=>{
     let sum = 0
