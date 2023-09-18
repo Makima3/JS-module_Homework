@@ -111,7 +111,7 @@ let simpsons = [
 // =========================
 //     Цикл в циклі
 // - Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
-let coursesArrays = [
+let coursesArray = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,
