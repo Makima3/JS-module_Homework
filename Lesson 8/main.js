@@ -58,7 +58,7 @@ console.log(sortedClients);
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-/*function Car (model, manufacturer, year, maxSpeed, enginePower) {
+function Car (model, manufacturer, year, maxSpeed, enginePower) {
     this.model = model;
     this.manufacturer = manufacturer;
     this.year = year;
@@ -97,7 +97,7 @@ car.drive();
 car.info();
 car.addToDriver('Alex', 25, true);
 car.increaseMaxSpeed(50);
-car.changeYear(2020);*/
+car.changeYear(2020);
 //- (Те саме, тільки через клас)//Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна.
 // додати в об'єкт функції:
 //-- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
@@ -125,11 +125,61 @@ class Car1 {
             console.log(this[key]);
         }
     }
+    addToDriver (name, age, licence) {
+        this.driver = {name, age, licence}
+        console.log(this.driver);
+    }
+    increaseMaxSpeed(newSpeed) {
+        this.maxSpeed += newSpeed;
+        newSpeed = 50;
+        console.log(this.maxSpeed);
+    }
+    changeYear(newYear) {
+        this.year = newYear;
+        newYear = 2020;
+        console.log(this.year);
+    }
 }
 let car1 = new Car1('audi','German',2018,220,4.0);
+console.log(car1);
 car1.drive();
-car1.info()
+car1.info();
+car1.addToDriver('Alex', 25, true);
+car1.increaseMaxSpeed(50);
+car1.changeYear(2020);
 //-створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 //Створити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 // Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку.
+function Cinderella (name, age, footSize) {
+    this.name = name;
+    this.age = age;
+    this.footSize = footSize;
+}
+
+let arrCin = [
+    new Cinderella('Cinderella1', 28, 39 ),
+    new Cinderella('Cinderella2', 36, 40 ),
+    new Cinderella('Cinderella3', 22, 38 ),
+    new Cinderella('Cinderella4', 34, 31 ),
+    new Cinderella('Cinderella5', 19, 36 ),
+    new Cinderella('Cinderella6', 15, 42 ),
+    new Cinderella('Cinderella7', 21, 40.5 ),
+    new Cinderella('Cinderella8', 39, 37 ),
+    new Cinderella('Cinderella9', 50, 44 ),
+    new Cinderella('Cinderella10', 29, 39.5 )
+]
+let Prince = class {
+    constructor(name, age,bootSize) {
+        this.name = name;
+        this.age = age;
+        this.bootSize = bootSize;
+    }
+}
+let prince = new Prince('prince1', 45, 38)
+function findCin () {
+    for (const cin of arrCin) {
+        if( cin.footSize===prince.bootSize);
+        return cin;
+}
+}
