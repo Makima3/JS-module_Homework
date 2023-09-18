@@ -176,10 +176,10 @@ let Prince = class {
         this.bootSize = bootSize;
     }
 }
-let prince = new Prince('prince1', 45, 38)
-function findCin () {
-    for (const cin of arrCin) {
-        if( cin.footSize===prince.bootSize);
-        return cin;
-}
-}
+// let prince = new Prince('prince1', 45, 38)
+// function findCin () {
+//     for (const cin of arrCin) {
+//         if( cin.footSize===prince.bootSize);
+//         return cin;
+// }
+// }
