@@ -151,12 +151,13 @@ car1.changeYear(2020);
 //Створити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 // Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку.
-function Cinderella (name, age, footSize) {
-    this.name = name;
-    this.age = age;
-    this.footSize = footSize;
+let Cinderella = class  {
+    constructor (name, age, footSize) {
+        this.name = name;
+        this.age = age;
+        this.footSize = footSize;
+    }
 }
-
 let arrCin = [
     new Cinderella('Cinderella1', 28, 39 ),
     new Cinderella('Cinderella2', 36, 40 ),
@@ -164,10 +165,10 @@ let arrCin = [
     new Cinderella('Cinderella4', 34, 31 ),
     new Cinderella('Cinderella5', 19, 36 ),
     new Cinderella('Cinderella6', 15, 42 ),
-    new Cinderella('Cinderella7', 21, 40.5 ),
+    new Cinderella('Cinderella7', 21, 40.5),
     new Cinderella('Cinderella8', 39, 37 ),
     new Cinderella('Cinderella9', 50, 44 ),
-    new Cinderella('Cinderella10', 29, 39.5 )
+    new Cinderella('Cinderella10', 29, 39.5)
 ]
 let Prince = class {
     constructor(name, age,bootSize) {
@@ -176,10 +177,15 @@ let Prince = class {
         this.bootSize = bootSize;
     }
 }
-// let prince = new Prince('prince1', 45, 38)
-// function findCin () {
-//     for (const cin of arrCin) {
-//         if( cin.footSize===prince.bootSize);
-//         return cin;
-// }
-// }
+let prince = new Prince('prince1', 45, 38)
+ function findCin (arrCin) {
+    for (const cin of arrCin) {
+        if( cin.footSize===this.bootSize);
+        return cin;
+}
+}
+function findCin1 (arrCin){
+    return arrCin.find ((Cinderella)=> Cinderella.footSize===this.bootSize)
+}
+console.log(findCin1(arrCin));
+console.log(findCin1(arrCin));
