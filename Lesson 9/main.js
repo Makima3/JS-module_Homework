@@ -108,9 +108,34 @@ let simpsons = [
         photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
     },
 ];
+let wrap = document.createElement('div');
+for (let wrapElement of simpsons) {
+    let div = document.createElement('div');
+    let p2 = document.createElement('p');
+    let h  = document.createElement('h2');
+    let img = document.createElement('img');
+    let p = document.createElement('p');
+    let p1 = document.createElement('p');
+
+    div.classList.add('members')
+    h.innerText = wrapElement.name;
+    p1.innerText= wrapElement.surname;
+    p2.innerText = wrapElement.age;
+    p.innerText = wrapElement.info;
+    img.innerText = wrapElement.photo;
+
+    img.setAttribute('src', wrapElement.photo);
+    img.setAttribute('alt', wrapElement.name)
+    div.append(h,p,p1,p2,img);
+    document.body.appendChild(div);
+}
+document.body.appendChild(wrap);
 // =========================
 //     Цикл в циклі
 // - Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
+// Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
+// Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
+// ------------------
 let coursesArray = [
     {
         title: 'JavaScript Complex',
@@ -149,6 +174,30 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
-// Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
-// Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
-// ------------------
+for (let coursesElement of coursesArray) {
+    let div = document.createElement('div');
+    let title = document.createElement('h1');
+    let generalDuration = document.createElement('div');
+    let monthDuration  = document.createElement('div');
+    let hourDuration = document.createElement('div');
+    let ul =  document.createElement('ul');
+
+    title.innerText = coursesElement.title;
+    monthDuration.innerText = coursesElement.monthDuration;
+    hourDuration.innerText = coursesElement.hourDuration;
+    for (let module of coursesElement.modules) {
+let li = document.createElement('li');
+ul.append('li');
+    }
+    div.classList.add('basic');
+    generalDuration.classList.add('aboutDuration');
+    monthDuration.classList.add('month');
+    hourDuration.classList.add('hour')
+
+    generalDuration.append(monthDuration, hourDuration);
+    div.append(generalDuration, title, ul);
+    document.body.appendChild(div);
+}
+
+
+
