@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="users" class="initialForm">
+    <label> Name<input type="text" name="name" placeholder="name"></label>
+    <label> Surname<input type="text" name="surname" placeholder="surname"></label>
+    <label> Age<input type="number" name="age" placeholder="age"></label>
+    <button> Submit</button>
+</form>
+
+<script>
+    const form = document.forms.users;
+    form.onsubmit = function (e) {
+        e.preventDefault();
+        let cover = document.createElement('div');
+        let name = document.createElement('div');
+        let surname = document.createElement('div');
+        let age = document.createElement('div');
+
+        name.innerText = this.name.value;
+        surname.innerText = this.surname.value;
+        age.innerText = this.age.value;
+
+        cover.appendChild(name, surname, age);
+        document.body.appendChild(cover)
+        }
+</script>
+</body>
+</html>
