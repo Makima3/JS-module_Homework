@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="addNum">calculate: </div>
+<script>
+  // є сторінка, на якій  є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
+let calculate = localStorage.getItem('calculate')||0;
+let block = document.getElementById('addNum');
+let value = (+calculate +1).toString();
+
+block.innerText = value;
+localStorage.setItem('calculate', value)
+
+</script>
+</body>
+</html>
