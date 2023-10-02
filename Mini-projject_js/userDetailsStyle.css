@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin:0 ;
+    padding:0;
+    width: 90vw;
+    height: 110vh;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    margin-left: 30px;
+    line-height: 0.3em;
+}
+main{
+     margin-left: 20px;
+    font-size: 15px;
+}
+.post{
+    margin-top: 20px;
+    width: 250px;
+    height: 45px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 12px;
+    border:1px solid black;
+    background: transparent;
+    transition: .3s;
+    margin-left: 20px;
+
+}
+.post:hover{
+
+    background: #303130;
+    color:white;
+    transition: .5s;
+}
+
+.detail{
+    width: 250px;
+    height: 35px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 12px;
+    border:1px solid black;
+    background: transparent;
+    transition: .3s;
+    margin-left: 45px;
+
+}
+.detail:hover{
+
+    background: #303130;
+    color:white;
+    transition: .5s;
+}
+.postsTitle{
+    margin: 25px 0 10px 40px;
+    width: 260px;
+    height: 65px;
+    border: solid 1px black ;
+    border-radius: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.id{
+    line-height: 0;
+}
+.title >p{
+    line-height:1em;
+
+}
+
+span{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
