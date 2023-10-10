@@ -75,7 +75,7 @@ else if (id){
                     </div>
                     <div class="adress">
                     <h3>Address:</h3>
-                    <p><b>City:</b> ${users.address.cite}</p>
+                    <p><b>City:</b> ${users.address.city}</p>
                     <p><b>Street:</b> ${users.address.street}</p>
                     <p><b>Suite:</b> ${users.address.suite}</p>
                     <p><b>ZipCode:</b> ${users.address.zipcode}</p>
